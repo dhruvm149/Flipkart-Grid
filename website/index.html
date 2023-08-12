@@ -7,16 +7,24 @@
     <title>Ecommerce Website</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" />
     <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
     <script src="https://use.fontawesome.com/dfba0bb4d8.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
 </head>
 <body>
     
     <section id="header">
         <a href="#"><img src="img/logo.png" class="logo" alt=""></a>
-
-        <div>
+        <div>            
             <ul id="navbar">
                 <a href="#" id="close"><i class='fa fa-close'></i></a>
+                <li>
+                    <div class="form-group has-search" >
+                    <span class="fa fa-search form-control-feedback"></span>
+                    <input type="text" class="form-control" placeholder="Search">
+                  </div>
+                </li>
                 <li><a class="active" href="index.html">Home</a></li>
                 <li><a href="shop.html">Shop</a></li>
                 <li><a href="blog.html">Blog</a></li>
@@ -27,10 +35,36 @@
         </div>
         <div id="mobile">
             <a href="cart.html"><i class="fa fa-shopping-bag" aria-hidden="true"></i></a>
-            <i id="bar" class="fa fa-bars" aria-hidden="true"></i>      
-                 
+            <i id="bar" class="fa fa-bars" aria-hidden="true"></i>          
         </div>
     </section>
+
+    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+          <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+        </ol>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img class="d-block w-100" src="img/fi1.jpeg" alt="First slide">
+          </div>
+          <div class="carousel-item">
+            <img class="d-block w-100" src="img/fi2.jpeg" alt="Second slide">
+          </div>
+          <div class="carousel-item">
+            <img class="d-block w-100" src="img/fi3.jpeg" alt="Third slide">
+          </div>
+        </div>
+        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
+      </div>
 
     <section id="hero">
         <h4>Trade in Offer</h4>
@@ -72,13 +106,13 @@
 
     <section id="product1" class="section-p1">
         <h2>Featured Products</h2>
-        <p>Summer Collection</p>
+        <p>Summer Best-Sellers</p>
         <div class="pro-container">
             <div class="pro">
                 <img src="img/products/f1.jpeg" alt="">
                 <div class="des">
-                    <span>Adiddas</span>
-                    <h5>Cotton shirts pure cotton</h5>
+                    <span>ADIDAS </span>
+                    <h5>LITE RACER ADAPT 4.0 Walking Shoes For Men  (Black)</h5>
                     <div class="star">
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
@@ -93,8 +127,8 @@
             <div class="pro">
                 <img src="img/products/f2.jpeg" alt="">
                 <div class="des">
-                    <span>Adiddas</span>
-                    <h5>Cotton shirts pure cotton</h5>
+                    <span>APPLE</span>
+                    <h5>iPhone 14 (Midnight, 128 GB)</h5>
                     <div class="star">
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
@@ -102,7 +136,7 @@
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
                     </div>
-                    <h4>$78</h4>
+                    <h4>$832</h4>
                 </div>
                 <a href="#" ><i class="fa-sharp fa-solid fa-cart-shopping"></i></a>
             </div>
@@ -125,8 +159,8 @@
             <div class="pro">
                 <img src="img/products/f4.jpeg" alt="">
                 <div class="des">
-                    <span>Adiddas</span>
-                    <h5>Cotton shirts pure cotton</h5>
+                    <span>Titan</span>
+                    <h5>Mechanical Analog Watch - For Men 90110WM01</h5>
                     <div class="star">
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
@@ -134,7 +168,7 @@
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
                     </div>
-                    <h4>$78</h4>
+                    <h4>$185</h4>
                 </div>
                 <a href="#" ><i class="fa-sharp fa-solid fa-cart-shopping"></i></a>
             </div>
@@ -157,8 +191,8 @@
             <div class="pro">
                 <img src="img/products/f6.jpeg" alt="">
                 <div class="des">
-                    <span>Adiddas</span>
-                    <h5>Cotton shirts pure cotton</h5>
+                    <span>SAMSUNG</span>
+                    <h5>Galaxy Z Fold5 (Icy Blue, 512 GB)  (12 GB RAM)</h5>
                     <div class="star">
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
@@ -166,7 +200,7 @@
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
                     </div>
-                    <h4>$78</h4>
+                    <h4>$1999</h4>
                 </div>
                 <a href="#" ><i class="fa-sharp fa-solid fa-cart-shopping"></i></a>
             </div>
@@ -189,8 +223,8 @@
             <div class="pro">
                 <img src="img/products/f8.jpeg" alt="">
                 <div class="des">
-                    <span>Adiddas</span>
-                    <h5>Cotton shirts pure cotton</h5>
+                    <span>New Balance</span>
+                    <h5>PROPEL Running Shoes For Men (Black)</h5>
                     <div class="star">
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
@@ -198,7 +232,7 @@
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
                     </div>
-                    <h4>$78</h4>
+                    <h4>$60</h4>
                 </div>
                 <a href="#" ><i class="fa-sharp fa-solid fa-cart-shopping"></i></a>
             </div>
@@ -209,19 +243,19 @@
 
     <section id="banner" class="section-m1">
         <h4>Repair Services</h4>
-        <h2>Upto <span>70% Off</span>- All T-shirts & Accessories</h2>
+        <h2>Upto <span>70% Off</span>- All Accessories</h2>
         <button class="normal">Explore More</button>
     </section>
 
     <section id="product1" class="section-p1">
-        <h2>New Arrivals</h2>
-        <p>Summer Collection</p>
+        <h2>Pre-Order Now</h2>
+        <p>Summer Releases</p>
         <div class="pro-container">
             <div class="pro">
                 <img src="img/products/n1.jpeg" alt="">
                 <div class="des">
-                    <span>Adiddas</span>
-                    <h5>Cotton shirts pure cotton</h5>
+                    <span>SAMSUNG</span>
+                    <h5>Galaxy Z Flip5 (Mint, 256 GB)  (8 GB RAM)</h5>
                     <div class="star">
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
@@ -229,15 +263,15 @@
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
                     </div>
-                    <h4>$78</h4>
+                    <h4>$1250<div class="cut">$1300</div></h4>
                 </div>
                 <a href="#" ><i class="fa-sharp fa-solid fa-cart-shopping"></i></a>
             </div>
             <div class="pro">
                 <img src="img/products/n2.jpeg" alt="">
                 <div class="des">
-                    <span>Adiddas</span>
-                    <h5>Cotton shirts pure cotton</h5>
+                    <span>Sleepyhead</span>
+                    <h5>Sleepyhead Fabric 5 Seater Sofa  (Finish Color - Coco Brown, Knock Down)</h5>
                     <div class="star">
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
@@ -245,15 +279,15 @@
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
                     </div>
-                    <h4>$78</h4>
+                    <h4>$600<div class="cut">$1100</div></h4>
                 </div>
                 <a href="#" ><i class="fa-sharp fa-solid fa-cart-shopping"></i></a>
             </div>
             <div class="pro">
                 <img src="img/products/n3.jpeg" alt="">
                 <div class="des">
-                    <span>Adiddas</span>
-                    <h5>Cotton shirts pure cotton</h5>
+                    <span>SAMSUNG</span>
+                    <h5>Crystal 4K iSmart Series 163 cm (65 inch) Ultra HD (4K) LED Smart Tizen TV</h5>
                     <div class="star">
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
@@ -261,15 +295,15 @@
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
                     </div>
-                    <h4>$78</h4>
+                    <h4>$1500<div class="cut">$1700</div></h4>
                 </div>
                 <a href="#" ><i class="fa-sharp fa-solid fa-cart-shopping"></i></a>
             </div>
             <div class="pro">
                 <img src="img/products/n4.jpeg" alt="">
                 <div class="des">
-                    <span>Adiddas</span>
-                    <h5>Cotton shirts pure cotton</h5>
+                    <span>Nothing</span>
+                    <h5>Nothing Phone (1) (White, 256 GB)  (8 GB RAM)</h5>
                     <div class="star">
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
@@ -277,15 +311,15 @@
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
                     </div>
-                    <h4>$78</h4>
+                    <h4>$400<div class="cut">$500</div></h4>
                 </div>
                 <a href="#" ><i class="fa-sharp fa-solid fa-cart-shopping"></i></a>
             </div>
             <div class="pro">
                 <img src="img/products/n5.jpeg" alt="">
                 <div class="des">
-                    <span>Adiddas</span>
-                    <h5>Cotton shirts pure cotton</h5>
+                    <span>NG</span>
+                    <h5>Decor Faux Marble Dining Room Table for 8 Person White Rectangular Top in Gold Stone 8 Seater Dining Table</h5>
                     <div class="star">
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
@@ -293,15 +327,15 @@
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
                     </div>
-                    <h4>$78</h4>
+                    <h4>$1400<div class="cut">$1600</div></h4>
                 </div>
                 <a href="#" ><i class="fa-sharp fa-solid fa-cart-shopping"></i></a>
             </div>
             <div class="pro">
                 <img src="img/products/n6.jpeg" alt="">
                 <div class="des">
-                    <span>Adiddas</span>
-                    <h5>Cotton shirts pure cotton</h5>
+                    <span>Viva</span>
+                    <h5>Viva EVO 27.5T Single Speed Mountain Cycle</h5>
                     <div class="star">
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
@@ -309,15 +343,15 @@
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
                     </div>
-                    <h4>$78</h4>
+                    <h4>$150<div class="cut">$200</div></h4>
                 </div>
                 <a href="#" ><i class="fa-sharp fa-solid fa-cart-shopping"></i></a>
             </div>
             <div class="pro">
                 <img src="img/products/n7.jpeg" alt="">
                 <div class="des">
-                    <span>Adiddas</span>
-                    <h5>Cotton shirts pure cotton</h5>
+                    <span>SONY</span>
+                    <h5>SONY PlayStation 5 console 825 GB</h5>
                     <div class="star">
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
@@ -325,15 +359,15 @@
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
                     </div>
-                    <h4>$78</h4>
+                    <h4>$700<div class="cut">$800</div></h4>
                 </div>
                 <a href="#" ><i class="fa-sharp fa-solid fa-cart-shopping"></i></a>
             </div>
             <div class="pro">
                 <img src="img/products/n8.jpeg" alt="">
                 <div class="des">
-                    <span>Adiddas</span>
-                    <h5>Cotton shirts pure cotton</h5>
+                    <span>Yonex</span>
+                    <h5>Yonex Astrox 88 D Game Badminton Racket</h5>
                     <div class="star">
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
@@ -341,7 +375,7 @@
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
                     </div>
-                    <h4>$78</h4>
+                    <h4>$80<div class="cut">$100</div></h4>
                 </div>
                 <a href="#" ><i class="fa-sharp fa-solid fa-cart-shopping"></i></a>
             </div>
@@ -451,6 +485,9 @@
    </footer>
 
     <script src="script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 </body>
 </html>
 
