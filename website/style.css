@@ -84,7 +84,14 @@ body {
 
 .has-search .form-control {
   padding-left: 2.375rem;
-  width: 800px;
+  width: 675px;
+  /* width: 200%; */
+
+}
+
+#logo {
+  /* position: fixed; */
+  justify-content: left;
 }
 
 .has-search .form-control-feedback {
@@ -103,13 +110,14 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 20px 80px;
+  padding: 20px 80px 10px 80px;
   background: #d7d4f3;
   box-shadow: 0 15px 15px rgba(0, 0, 0, 0.06);
   z-index: 999;
   position: sticky;
   top: 0;
   left: 0;
+  align-items: flex-start;
 }
 
 #navbar {
@@ -134,17 +142,20 @@ body {
 #navbar li a:hover,
 #navbar li a.active {
   color: #088178;
+  animation-delay: 2000ms;
 }
 
 #navbar li a.active::after,
 #navbar li a:hover::after {
   content: "";
-  width: 40%;
+  width: 50%;
   height: 2px;
   background-color: #088178;
   position: absolute;
   bottom: -4px;
-  left: 20px;
+  left: 25%;
+  transition: width 1.5s ease;
+  animation-delay: 1.5s;
 }
 
 #mobile {
@@ -157,6 +168,11 @@ body {
 }
 
 /* Home Page*/
+
+#banloop {
+  height: 50px;
+  justify-content: center;
+}
 
 #hero {
   background-image: url("img/hero4.png");
@@ -788,16 +804,47 @@ footer .copyright {
 }
 
 /* About Page*/
+
+.main {
+  width: 50%;
+  margin: 50px auto;
+}
+
+.has-search .form-control {
+  padding-left: 2.375rem;
+  width: 675px;
+  /* width: 200%; */
+
+}
+
+#logo {
+  /* position: fixed; */
+  justify-content: left;
+}
+
+.has-search .form-control-feedback {
+  position: absolute;
+  z-index: 2;
+  display: block;
+  width: 2.375rem;
+  height: 2.375rem;
+  line-height: 2.375rem;
+  text-align: center;
+  pointer-events: none;
+  color: #aaa;
+}
+
 #page-header.about-header {
   background-image: url("img/about/banner.png");
 }
 
 #about-head {
-  display: flex;
+  /* display: flex; */
   align-items: center;
 }
 #about-head div {
-  padding-left: 40px;
+  padding-left: 202px;
+  padding-right: 202px;
 }
 #about-head img {
   width: 50%;
@@ -1294,3 +1341,19 @@ a{
   color: white;
 }
 
+/* Contact us */
+
+.people {
+  display: flex;
+  gap: 20px;
+}
+
+.people div {
+  text-align: center;
+}
+
+.people img {
+  width: 450px;
+  height: 450px;
+  border-radius: 50%; /* Make the image circular */
+}
