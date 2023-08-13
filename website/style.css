@@ -84,6 +84,7 @@ body {
 
 .has-search .form-control {
   padding-left: 2.375rem;
+  width: 800px;
 }
 
 .has-search .form-control-feedback {
