@@ -775,7 +775,7 @@ footer .copyright {
 
 #signup-body .pro {
   width: 100%;
-  height: 450px;
+  height: 500px;
   /* min-width: 250px; */
   padding: 10px 12px;
   border: 1px solid #cce7d0;
@@ -866,8 +866,16 @@ button.normal-signup {
   transition: 0.2s;
 }
 
+#switch-form a {
+  padding-top: 10px;
+    color: #fff; /* Change this to the desired color */
+    text-decoration: none;
+    font-family: 'spartan'; /* Change this to the desired default font */
+}
+
+
 #blog {
-  padding: 150px 150px 0 150px;
+  padding: 25px 150px 0 150px;
 }
 
 #blog .blog-box {

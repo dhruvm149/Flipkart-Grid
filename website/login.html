@@ -13,9 +13,9 @@
     <script src="https://use.fontawesome.com/dfba0bb4d8.js"></script>
 </head>
 <body>
-
+    
     <section id="header">
-        <a href="#"><img src="img/logo.png" class="logo" alt=""></a>
+        <a href="index.html"><img src="img/logo.png" class="logo" alt=""></a>
         <div>            
             <ul id="navbar">
                 <a href="#" id="close"><i class='fa fa-close'></i></a>
@@ -28,10 +28,10 @@
                 <li><a href="index.html">Home</a></li>
                 <li><a href="shop.html">Shop</a></li>
                 <!-- <li><a href="blog.html">Blog</a></li> -->
-                <li><a class="active" href="about.html">About</a></li>
+                <li><a href="about.html">About</a></li>
                 <li><a href="contact.html">Contact</a></li>
                 <li><a href="cart.html">Cart</a></li>
-                <li><a href="signup.html">SignUp/Login</a></li>
+                <li><a class="active" href="signup.html">SignUp/Login</a></li>
                 <!-- <li id="lg-bag"><a href="cart.html"><i class="fa fa-shopping-bag" aria-hidden="true"></i></a></li> -->
             </ul>
         </div>
@@ -41,63 +41,73 @@
         </div>
     </section>
 
-
-    <section id="page-header" class="about-header">
-        <h2>#Know Us</h2>
-        <p>KNOW US Lorem ipsum dolor sit amet consectetu</p>
+    <section id="page-header-blog" class="blog-header">
+        <h2>#Login</h2>
+        <!-- <p>READ MORE Lorem ipsum dolor sit amet consectetu</p> -->
         <a href="#" class="to-top">
             <i class="fas fa-chevron-up"></i>
         </a>
     </section>
-  
-    <section id="about-head" class="section-p1">
-        <img src="img/about/a6.jpg" alt="">
-        <div>
-            <h2>Who we are</h2>
-            <p>We are <h3><i>Persona Picks</i></h3>the ultimate destination for an enhanced shopping experience. We specialize in offering top-notch products across various categories, tailored to your preferences. Our platform boasts a cutting-edge <b>personalized recommendation system</b> that ensures you discover products perfectly suited to your unique tastes and needs.
-            </p>
-            <p>
-            At <b>Person Picks</b>, our commitment to excellence shines through. We meticulously assess the <b>quality</b> of all our merchandise, collaborating solely with <b>trusted suppliers</b> to guarantee the delivery of premium products. Our core values revolve around delivering <b>superior quality</b> and unparalleled <b>customer service</b>. Above all, we firmly believe that shopping should be <b>accessible to all</b>, transcending luxury into a right. This fuels our dedication to providing you with the finest items at the most <b>competitive prices</b>, conveniently shipped to your doorstep, no matter where you reside.
-            </p>
-            <!-- <abbr title="">Lorem ipsum dolor sit amet consectetur adipisicing eli</abbr> -->
+    <section id="blog">
 
-            <br><br>
+        <section id="signup-body" class="section-p1">
 
-            <marquee bgcolor="#ccc" loop="-5"  scrollamount="10" width="100%">Upto 70% Off- All Electronics & Accessories</marquee>
-        </div>
-    </section>
+            <!-- <div id="banloop">
+                <marquee bgcolor="#ccc" loop="-5"  scrollamount="10" vspace="10" width="100%">SignUp now for extra 10% off!</marquee>
+            </div> -->
+            <div class = "both" >
+                <!-- <p>Tailored to your taste</p> -->
+                <div class="pro-container">
+                    <h2>Login</h2>
+                    <div class="pro">
+                        <!-- <img src="img/products/f8.jpeg" alt=""> -->
+                        <div class="des">
+                            <!-- <span>New Balance</span>
+                            <h5>PROPEL Running Shoes For Men (Black)</h5>
+                            <div class="star">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <h4>₹60</h4> -->
+                            <form action="/login" method="POST">
+                                <input type="hidden" name="_csrf" value="<%= locals.csrfToken %>">
+                                <p>
+                                    <label for="email">E-Mail</label>
+                                    <input type="email" id="email" name="email" value="<%= inputData.email %>" required>
+                                </p>
+                                <p>
+                                    <label for="password">Password</label>
+                                    <input type="password" id="password" name="password" minlength="8" value="<%= inputData.password %>" required>
+                                </p>
+                                <button class="normal-signup">Login</button>
+                                <p id="switch-form"><a href="signup.html">Create a new user</a></p>
+                            </form>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
     
-    <section id="about-app" class="section-padding">
-        <h2>Download Our <a href="#">app</a> </h2>
-        <div class="video">
-            <video autoplay muted loop src="img/about/1.mp4"></video>
-        </div>
+        </section> 
     </section>
+   
+    <!-- <section id="pagination" class="section-p1">
+        <a href="#">1</a>
+        <a href="#">2</a>
+        <a href="#"><i class="fa fa-long-arrow-right" aria-hidden="true"></i></a>
+    </section> -->
 
-    <section id="feature" class="section-p1">
-        <div class="fe-box">
-            <img src="img/features/f1.png" alt="">
-            <h6>Great offers, a touch away.</h6>
+    <section id="newsletter" class="section-p1 section-m1">
+        <div class="newstext">
+            <h4>Sign uP for newsletters</h4>
+            <p>Lorem ipsum dolor sit amet <span>consectetur</span>.</p>
         </div>
-        <div class="fe-box">
-            <img src="img/features/f2.png" alt="">
-            <h6>Always on time!.</h6>
-        </div>
-        <div class="fe-box">
-            <img src="img/features/f3.png" alt="">
-            <h6>Pocket-friendly options!.</h6>
-        </div>
-        <div class="fe-box">
-            <img src="img/features/f4.png" alt="">
-            <h6>Credit options available.</h6>
-        </div>
-        <div class="fe-box">
-            <img src="img/features/f5.png" alt="">
-            <h6>Well - trusted brands.</h6>
-        </div>
-        <div class="fe-box">
-            <img src="img/features/f6.png" alt="">
-            <h6>24x7 Customer Support.</h6>
+        <div class="form">
+            <input type="text" placeholder="your email address">
+            <button class="normal">Sign Up</button>
         </div>
     </section>
 
@@ -144,15 +154,15 @@
         <h4>Install App</h4>
         <p>From app store or Google PLay Store</p>
         <div class="row">
-            <img src="img/pay/app.jpg" alt="">
-            <img src="img/pay/play.jpg" alt="">
+            <img src="img/pay/app.jpeg" alt="">
+            <img src="img/pay/play.jpeg" alt="">
         </div>
         <p>Secured payment Gateways</p>
         <img src="img/pay/pay.png" alt="">
     </div>
 
     <div class="copyright">
-        <p>© 2023 Cara, Inc. All Rights Reserved</p>
+        <p>© 2023 Cara, Inc. All Rights Reserved, Ecommerce Website Template</p>
     </div>
 
    </footer>
