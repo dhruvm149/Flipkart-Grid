@@ -9,7 +9,7 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
     />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
     <script src="https://use.fontawesome.com/dfba0bb4d8.js"></script>
@@ -18,7 +18,7 @@
 
 
     <section id="header">
-      <a href="#"><img src="img/logo.png" class="logo" alt=""></a>
+      <a href="#"><img src="{{ url_for('static', filename='img/logo.png') }}" class="logo" alt=""></a>
       <div>            
           <ul id="navbar">
               <a href="#" id="close"><i class='fa fa-close'></i></a>
@@ -28,13 +28,13 @@
                   <input type="text" class="form-control" placeholder="Search">
                 </div>
               </li>
-              <li><a href="index.html">Home</a></li>
-              <li><a href="shop.html">Shop</a></li>
-              <!-- <li><a href="blog.html">Blog</a></li> -->
-              <li><a href="about.html">About</a></li>
-              <li><a href="contact.html">Contact</a></li>
-              <li><a class="active" href="cart.html">Cart</a></li>
-              <li><a href="signup.html">SignUp/Login</a></li>
+              <li><a href="/">Home</a></li>
+                <li><a href="{{ url_for('shop') }}">Shop</a></li>
+                <!-- <li><a href="blog.html">Blog</a></li> -->
+                <li><a href="{{ url_for('about') }}">About</a></li>
+                <li><a href="{{ url_for('contact') }}">Contact</a></li>
+                <li><a class="active" href="{{ url_for('cart') }}">Cart</a></li>
+                <li><a href="{{ url_for('signup') }}">SignUp/Login</a></li>
               <!-- <li id="lg-bag"><a href="cart.html"><i class="fa fa-shopping-bag" aria-hidden="true"></i></a></li> -->
           </ul>
       </div>
@@ -57,7 +57,7 @@
 
 
       <div class="pro">
-        <img class="img" src="img/products/f1.jpeg" alt="">
+        <img class="img" src="{{ url_for('static', filename='img/products/f1.jpeg') }}" alt="">
         <div class="des">
             <span>Adiddas</span>
             <h5 class="name">Orange Printed T-Shirt</h5>
@@ -68,13 +68,13 @@
                 <i class="fas fa-star"></i>
                 <i class="fas fa-star"></i>
             </div>
-            <h4 class="cost">₹78</h4>
+            <h4 class="cost">$78</h4>
         </div>
         <button class="btn-cart fa-sharp fa-solid fa-cart-shopping">  Add to Cart </button>
     </div>
 
     <div class="pro">
-      <img class="img" src="img/products/f2.jpeg" alt="">
+      <img class="img" src="{{ url_for('static', filename='img/products/f2.jpeg') }}" alt="">
       <div class="des">
           <span>Adiddas</span>
           <h5 class="name">Orange Printed T-Shirt</h5>
@@ -85,13 +85,13 @@
               <i class="fas fa-star"></i>
               <i class="fas fa-star"></i>
           </div>
-          <h4 class="cost">₹78</h4>
+          <h4 class="cost">$78</h4>
       </div>
       <button class="btn-cart fa-sharp fa-solid fa-cart-shopping">   Add to Cart </button>
   </div>
 
   <div class="pro">
-    <img class="img" src="img/products/f3.jpeg" alt="">
+    <img class="img" src="{{ url_for('static', filename='img/products/f3.jpeg') }}" alt="">
     <div class="des">
         <span>Adiddas</span>
         <h5 class="name">Orange Printed T-Shirt</h5>
@@ -102,13 +102,13 @@
             <i class="fas fa-star"></i>
             <i class="fas fa-star"></i>
         </div>
-        <h4 class="cost">₹78</h4>
+        <h4 class="cost">$78</h4>
     </div>
     <button class="btn-cart fa-sharp fa-solid fa-cart-shopping">  Add to Cart</button>
 </div>
 
 <div class="pro">
-  <img class="img" src="img/products/f4.jpeg" alt="">
+  <img class="img" src="{{ url_for('static', filename='img/products/f4.jpeg') }}" alt="">
   <div class="des">
       <span>Adiddas</span>
       <h5 class="name">Orange Printed T-Shirt</h5>
@@ -119,7 +119,7 @@
           <i class="fas fa-star"></i>
           <i class="fas fa-star"></i>
       </div>
-      <h4 class="cost">₹78</h4>
+      <h4 class="cost">$78</h4>
   </div>
   <button class="btn-cart fa-sharp fa-solid fa-cart-shopping">  Add to Cart</button>
 </div>
@@ -127,7 +127,7 @@
 
 
           <div class="pro">
-              <img class="img" src="img/products/n1.jpeg" alt="">
+              <img class="img" src="{{ url_for('static', filename='img/products/n1.jpeg') }}" alt="">
               <div class="des">
                   <span>Adiddas</span>
                   <h5 class="name">Cotton shirts pure cotton</h5>
@@ -138,12 +138,12 @@
                       <i class="fas fa-star"></i>
                       <i class="fas fa-star"></i>
                   </div>
-                  <h4 class="cost">₹78</h4>
+                  <h4 class="cost">$78</h4>
               </div>
               <button class="btn-cart fa-sharp fa-solid fa-cart-shopping">  Add to Cart</button>
           </div>
           <div class="pro">
-              <img class="img" src="img/products/n2.jpeg" alt="">
+              <img class="img" src="{{ url_for('static', filename='img/products/n2.jpeg') }}" alt="">
               <div class="des">
                   <span>Adiddas</span>
                   <h5 class="name">Cotton shirts pure cotton</h5>
@@ -154,30 +154,13 @@
                       <i class="fas fa-star"></i>
                       <i class="fas fa-star"></i>
                   </div>
-                  <h4 class="cost">₹78</h4>
-              </div>
-              <button class="btn-cart fa-sharp fa-solid fa-cart-shopping">  Add to Cart</button>
-              <!-- <a><i class="fa-sharp fa-solid fa-cart-shopping"></i></a> -->
-          </div>
-          <div class="pro">
-              <img class="img" src="img/products/n3.jpeg" alt="">
-              <div class="des">
-                  <span>Adiddas</span>
-                  <h5 class="name">Cotton shirts pure cotton</h5>
-                  <div class="star">
-                      <i class="fas fa-star"></i>
-                      <i class="fas fa-star"></i>
-                      <i class="fas fa-star"></i>
-                      <i class="fas fa-star"></i>
-                      <i class="fas fa-star"></i>
-                  </div>
-                  <h4 class="cost">₹78</h4>
+                  <h4 class="cost">$78</h4>
               </div>
               <button class="btn-cart fa-sharp fa-solid fa-cart-shopping">  Add to Cart</button>
               <!-- <a><i class="fa-sharp fa-solid fa-cart-shopping"></i></a> -->
           </div>
           <div class="pro">
-              <img class="img" src="img/products/n4.jpeg" alt="">
+              <img class="img" src="{{ url_for('static', filename='img/products/n3.jpeg') }}" alt="">
               <div class="des">
                   <span>Adiddas</span>
                   <h5 class="name">Cotton shirts pure cotton</h5>
@@ -188,7 +171,24 @@
                       <i class="fas fa-star"></i>
                       <i class="fas fa-star"></i>
                   </div>
-                  <h4 class="cost">₹78</h4>
+                  <h4 class="cost">$78</h4>
+              </div>
+              <button class="btn-cart fa-sharp fa-solid fa-cart-shopping">  Add to Cart</button>
+              <!-- <a><i class="fa-sharp fa-solid fa-cart-shopping"></i></a> -->
+          </div>
+          <div class="pro">
+              <img class="img" src="{{ url_for('static', filename='img/products/n4.jpeg') }}" alt="">
+              <div class="des">
+                  <span>Adiddas</span>
+                  <h5 class="name">Cotton shirts pure cotton</h5>
+                  <div class="star">
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                  </div>
+                  <h4 class="cost">$78</h4>
               </div>
               <button class="btn-cart fa-sharp fa-solid fa-cart-shopping">  Add to Cart</button>              <!-- <a><i class="fa-sharp fa-solid fa-cart-shopping"></i></a> -->
           </div>
@@ -219,15 +219,15 @@
         <table>
           <tr>
             <td>Subtotal</td>
-            <td class="cart-subtotal-price">₹0.00</td>
+            <td class="cart-subtotal-price">$0.00</td>
           </tr>
           <tr>
             <td>Tax</td>
-            <td>₹35.00</td>
+            <td>$35.00</td>
           </tr>
           <tr>
             <td>Total</td>
-            <td class="cart-total-price">₹0.00</td>
+            <td class="cart-total-price">$0.00</td>
           </tr>
         </table>
       </div>
@@ -246,15 +246,15 @@
 
       <div class="people">
           <div>
-              <img src="img/people/1.png" alt="">
+              <img src="{{ url_for('static', filename='img/people/1.png') }}" alt="">
               <p><span>Dhruv Kuchhal</span> Software Engineering Undergraduate Student <br> Phone: +91 9996645233 <br> Email: contact@example.com</p>
           </div>
           <div>
-              <img src="img/people/2.png" alt="">
+              <img src="{{ url_for('static', filename='img/people/2.png') }}" alt="">
               <p><span>Dhruv Jain</span> Software Engineering Undergraduate Student <br> Phone: +91 8178966867 <br> Email: contact@example.com</p>
           </div>
           <div>
-              <img src="img/people/3.png" alt="">
+              <img src="{{ url_for('static', filename='img/people/3.png') }}" alt="">
               <p><span>Dhruv Malhotra</span> Software Engineering Undergraduate Student <br> Phone: +91 8810313774 <br> Email: contact@example.com</p>
           </div>
       </div>
@@ -273,7 +273,7 @@
 
     <footer class="section-p1">
       <div class="col">
-        <img class="logo" src="img/logo.png" alt="" />
+        <img class="logo" src="{{ url_for('static', filename='img/logo.png') }}" alt="" />
         <h4>Contact</h4>
         <p>
           <strong><i class="fa fa-home"></i></strong> Lorem ipsum dolor sit
@@ -318,24 +318,24 @@
 
       <div class="col install">
         <h4>Install App</h4>
-        <p>From app store or Google PLay Store</p>
+        <p>From app store or Google Play Store</p>
         <div class="row">
-          <img src="img/pay/app.jpeg" alt="" />
-          <img src="img/pay/play.jpeg" alt="" />
+            <img src="{{ url_for('static', filename='img/pay/app.jpeg') }}" alt="">
+            <img src="{{ url_for('static', filename='img/pay/play.jpeg') }}" alt="">
         </div>
         <p>Secured payment Gateways</p>
-        <img src="img/pay/pay.png" alt="" />
-      </div>
+        <img src="{{ url_for('static', filename='img/pay/pay.png') }}" alt="">
+    </div>
 
-      <div class="copyright">
-        <p>© 2023 Persona Picks, Inc. All Rights Reserved, Ecommerce Website Template</p>
-      </div>
+    <div class="copyright">
+        <p>© 2023 Persona Picks, Inc. All Rights Reserved</p>
+    </div>
     </footer>
     <style>
       .btn-cart{
       padding: 10px
       }
     </style>
-    <script src="script.js"></script>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
   </body>
 </html>

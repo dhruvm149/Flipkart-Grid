@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ecommerce Website</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" />
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
     <script src="https://use.fontawesome.com/dfba0bb4d8.js"></script>
@@ -15,7 +15,7 @@
 <body>
 
     <section id="header">
-        <a href="#"><img src="img/logo.png" class="logo" alt=""></a>
+        <a href="#"><img src="{{ url_for('static', filename='img/logo.png') }}" class="logo" alt=""></a>
         <div>            
             <ul id="navbar">
                 <a href="#" id="close"><i class='fa fa-close'></i></a>
@@ -25,13 +25,13 @@
                     <input type="text" class="form-control" placeholder="Search">
                   </div>
                 </li>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="shop.html">Shop</a></li>
+                <li><a href="/">Home</a></li>
+                <li><a href="{{ url_for('shop') }}">Shop</a></li>
                 <!-- <li><a href="blog.html">Blog</a></li> -->
-                <li><a class="active" href="about.html">About</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li><a href="cart.html">Cart</a></li>
-                <li><a href="signup.html">SignUp/Login</a></li>
+                <li><a class="active" href="{{ url_for('about') }}">About</a></li>
+                <li><a href="{{ url_for('contact') }}">Contact</a></li>
+                <li><a href="{{ url_for('cart') }}">Cart</a></li>
+                <li><a href="{{ url_for('signup') }}">SignUp/Login</a></li>
                 <!-- <li id="lg-bag"><a href="cart.html"><i class="fa fa-shopping-bag" aria-hidden="true"></i></a></li> -->
             </ul>
         </div>
@@ -44,14 +44,14 @@
 
     <section id="page-header" class="about-header">
         <h2>#Know Us</h2>
-        <p>KNOW US Lorem ipsum dolor sit amet consectetu</p>
+        <p>KNOW US</p>
         <a href="#" class="to-top">
             <i class="fas fa-chevron-up"></i>
         </a>
     </section>
   
     <section id="about-head" class="section-p1">
-        <img src="img/about/a6.jpg" alt="">
+        <img src="{{ url_for('static', filename='img/about/a6.jpeg') }}" alt="">
         <div>
             <h2>Who we are</h2>
             <p>We are <h3><i>Persona Picks</i></h3>the ultimate destination for an enhanced shopping experience. We specialize in offering top-notch products across various categories, tailored to your preferences. Our platform boasts a cutting-edge <b>personalized recommendation system</b> that ensures you discover products perfectly suited to your unique tastes and needs.
@@ -70,40 +70,40 @@
     <section id="about-app" class="section-padding">
         <h2>Download Our <a href="#">app</a> </h2>
         <div class="video">
-            <video autoplay muted loop src="img/about/1.mp4"></video>
+            <video autoplay muted loop src="{{ url_for('static', filename='img/about/1.mp4') }}"></video>
         </div>
     </section>
 
     <section id="feature" class="section-p1">
         <div class="fe-box">
-            <img src="img/features/f1.png" alt="">
+            <img src="{{ url_for('static', filename='img/features/f1.png') }}" alt="">
             <h6>Great offers, a touch away.</h6>
         </div>
         <div class="fe-box">
-            <img src="img/features/f2.png" alt="">
+            <img src="{{ url_for('static', filename='img/features/f2.png') }}" alt="">
             <h6>Always on time!.</h6>
         </div>
         <div class="fe-box">
-            <img src="img/features/f3.png" alt="">
+            <img src="{{ url_for('static', filename='img/features/f3.png') }}" alt="">
             <h6>Pocket-friendly options!.</h6>
         </div>
         <div class="fe-box">
-            <img src="img/features/f4.png" alt="">
+            <img src="{{ url_for('static', filename='img/features/f4.png') }}" alt="">
             <h6>Credit options available.</h6>
         </div>
         <div class="fe-box">
-            <img src="img/features/f5.png" alt="">
+            <img src="{{ url_for('static', filename='img/features/f5.png') }}" alt="">
             <h6>Well - trusted brands.</h6>
         </div>
         <div class="fe-box">
-            <img src="img/features/f6.png" alt="">
+            <img src="{{ url_for('static', filename='img/features/f6.png') }}" alt="">
             <h6>24x7 Customer Support.</h6>
         </div>
     </section>
 
    <footer class="section-p1">
     <div class="col">
-        <img class="logo" src="img/logo.png" alt="">
+        <img class="logo" src="{{ url_for('static', filename='img/logo.png') }}" alt="">
         <h4>Contact</h4>
         <p><strong>Address :</strong> Lorem ipsum dolor sit</p>
         <p><strong>Phone :</strong> 13569876540</p>
@@ -142,21 +142,21 @@
 
     <div class="col install">
         <h4>Install App</h4>
-        <p>From app store or Google PLay Store</p>
+        <p>From app store or Google Play Store</p>
         <div class="row">
-            <img src="img/pay/app.jpg" alt="">
-            <img src="img/pay/play.jpg" alt="">
+            <img src="{{ url_for('static', filename='img/pay/app.jpeg') }}" alt="">
+            <img src="{{ url_for('static', filename='img/pay/play.jpeg') }}" alt="">
         </div>
         <p>Secured payment Gateways</p>
-        <img src="img/pay/pay.png" alt="">
+        <img src="{{ url_for('static', filename='img/pay/pay.png') }}" alt="">
     </div>
 
     <div class="copyright">
-        <p>© 2023 Cara, Inc. All Rights Reserved</p>
+        <p>© 2023 Persona Picks, Inc. All Rights Reserved</p>
     </div>
 
    </footer>
 
-    <script src="script.js"></script>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
 </body>
 </html>

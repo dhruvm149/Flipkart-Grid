@@ -66,7 +66,8 @@ function updateCartTotal(){
         var priceElement = cartRow.getElementsByClassName('price')[0]
         var quantityElement = cartRow.getElementsByClassName('quantity')[0]
         var price = parseFloat(priceElement.innerText.replace('$',''))
-        var quantity = quantityElement.value
+        var quantity = +quantityElement.value
+
         total = total+(price * quantity)
         }
         total1 = total
@@ -94,7 +95,7 @@ function addItemToCart(pdtname, pdtprice, img){
         
           <td>
             <div class="cart-info">
-              <img src="${img}" width="120" hieght="120" alt="Tshirt" />
+              <img src="${img}" width="120" height="120" alt="Tshirt" />
               <div>
                 <p>${pdtname}</p>
                 <small>Price: ${pdtprice}</small>
