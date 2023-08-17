@@ -30,7 +30,7 @@
                 <!-- <li><a href="blog.html">Blog</a></li> -->
                 <li><a href="{{ url_for('about') }}">About</a></li>
                 <li><a href="{{ url_for('contact') }}">Contact</a></li>
-                <li><a href="{{ url_for('cart') }}">Cart</a></li>
+                <li><a href="{{ url_for('no_cart') }}">Cart</a></li>
                 <li><a class="active" href="{{ url_for('signup') }}">SignUp/Login</a></li>
                 <!-- <li id="lg-bag"><a href="cart.html"><i class="fa fa-shopping-bag" aria-hidden="true"></i></a></li> -->
             </ul>
@@ -51,10 +51,6 @@
     <section id="blog">
 
         <section id="signup-body" class="section-p1">
-
-            <!-- <div id="banloop">
-                <marquee bgcolor="#ccc" loop="-5"  scrollamount="10" vspace="10" width="100%">SignUp now for extra 10% off!</marquee>
-            </div> -->
             <div class = "both" >
                 
                 <!-- <p>Tailored to your taste</p> -->
@@ -63,16 +59,6 @@
                     <div class="pro">
                         <!-- <img src="img/products/f8.jpeg" alt=""> -->
                         <div class="des">
-                            <!-- <span>New Balance</span>
-                            <h5>PROPEL Running Shoes For Men (Black)</h5>
-                            <div class="star">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                            </div>
-                            <h4>$60</h4> -->
                             <form action="/signup" method="POST">
                                 <p>
                                     <label for="email">E-Mail</label>
@@ -105,8 +91,11 @@
                                     <label for="city">City</label>
                                     <input type="text" id="city" name="city">
                                 </p>
-                                <button class="normal-signup">Create Account</button>
-                                <p id="switch-form"><a href="{{ url_for('login') }}">Login Instead</a></p>
+                                <div class="signup-btn">
+                                    <button class="normal-signup">Create Account</button>
+                                    <button class="normal-signup"><a href="{{ url_for('login') }}">Login Instead</a></button>
+                                </div>
+
                             </form>
                         </div>
                     </div>

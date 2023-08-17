@@ -25,13 +25,13 @@
                     <input type="text" class="form-control" placeholder="Search">
                   </div>
                 </li>
-                <li><a href="/">Home</a></li>
-                <li><a class="active" href="{{ url_for('shop') }}">Shop</a></li>
+                <li><a href="/customer_index">Home</a></li>
+                <li><a class="active" href="{{ url_for('customer_shop') }}">Shop</a></li>
                 <!-- <li><a href="blog.html">Blog</a></li> -->
-                <li><a href="{{ url_for('about') }}">About</a></li>
-                <li><a href="{{ url_for('contact') }}">Contact</a></li>
-                <li><a href="{{ url_for('no_cart') }}">Cart</a></li>
-                <li><a href="{{ url_for('signup') }}">SignUp/Login</a></li>
+                <li><a href="{{ url_for('customer_about') }}">About</a></li>
+                <li><a href="{{ url_for('customer_contact') }}">Contact</a></li>
+                <li><a href="{{ url_for('customer_cart') }}">Cart</a></li>
+                <li><a href="{{ url_for('signup') }}">Sign Out</a></li>
                 <!-- <li id="lg-bag"><a href="cart.html"><i class="fa fa-shopping-bag" aria-hidden="true"></i></a></li> -->
             </ul>
         </div>
@@ -332,42 +332,41 @@
         </div>
     </section>
 
-   <footer class="section-p1">
-    <div class="col">
-        <img class="logo" src="{{ url_for('static', filename='img/logo.png') }}" alt="">
-        <h4>Contact</h4>
-        <p><strong>Address :</strong> Delhi Technological University, Shahbad Daulatpur Village, Rohini, New Delhi, Delhi, 110042</p>
-        <p><strong>Phone :</strong> +91-XXXXXXXXXX</p>
-        <p><strong>Hours :</strong> 10 am - 6 pm</p>
-        <div class="follow">
-            <h4>Follow Us</h4>
-            <div class="icon">
-                <i class="fab fa-facebook-f"></i>
-                <i class="fab fa-twitter"></i>
-                <i class="fab fa-instagram"></i>
-                <i class="fab fa-pinterest-p"></i>
-                <i class="fab fa-youtube"></i>
+    <footer class="section-p1">
+        <div class="col">
+            <img class="logo" src="{{ url_for('static', filename='img/logo.png') }}" alt="">
+            <h4>Contact</h4>
+            <p><strong>Address :</strong> Delhi Technological University, Shahbad Daulatpur Village, Rohini, New Delhi, Delhi, 110042</p>
+            <p><strong>Phone :</strong> +91-XXXXXXXXXX</p>
+            <p><strong>Hours :</strong> 10 am - 6 pm</p>
+            <div class="follow">
+                <h4>Follow Us</h4>
+                <div class="icon">
+                    <i class="fab fa-facebook-f"></i>
+                    <i class="fab fa-twitter"></i>
+                    <i class="fab fa-instagram"></i>
+                    <i class="fab fa-pinterest-p"></i>
+                    <i class="fab fa-youtube"></i>
+                </div>
             </div>
         </div>
-    </div>
 
     <div class="col">
         <h4>About</h4>
-        <a href="{{ url_for('about') }}">About us</a>
-        <a href="{{ url_for('shop') }}">Delivery Information</a>
-        <a href="{{ url_for('shop') }}">Privacy Policy</a>
-        <a href="{{ url_for('shop') }}">Terms & Conditions</a>
-        <a href="{{ url_for('contact') }}">Contact Us</a>
-        <!-- <a href="#">About US</a> -->
+        <a href="{{ url_for('customer_about') }}">About US</a>
+        <a href="{{ url_for('customer_shop') }}">Delivery Information</a>
+        <a href="{{ url_for('customer_shop') }}">Privacy Policy</a>
+        <a href="{{ url_for('customer_shop') }}">Terms & Conditions</a>
+        <a href="{{ url_for('customer_contact') }}">Contact Us</a>
     </div>
 
     <div class="col">
         <h4>My Account</h4>
-        <a href="{{ url_for('signup') }}">Sign In</a>
-        <a href="{{ url_for('no_cart') }}">View Cart</a>
-        <a href="{{ url_for('shop') }}">My Wishlist</a>
-        <a href="{{ url_for('shop') }}">Track My Order</a>
-        <a href="{{ url_for('shop') }}">Help</a>
+        <a href="{{ url_for('signup') }}">Sign Out</a>
+        <a href="{{ url_for('customer_cart') }}">View Cart</a>
+        <a href="{{ url_for('customer_shop') }}">My Wishlist</a>
+        <a href="{{ url_for('customer_shop') }}">Track My Order</a>
+        <a href="{{ url_for('customer_shop') }}">Help</a>
     </div>
 
 
@@ -385,7 +384,7 @@
     <div class="copyright">
         <p>© 2023 Persona Picks, Inc. All Rights Reserved</p>
     </div>
-    </footer>
+</footer>
 
     <script src="{{ url_for('static', filename='script.js') }}"></script>
 </body>
