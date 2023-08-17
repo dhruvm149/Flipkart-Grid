@@ -28,13 +28,13 @@
                   <input type="text" class="form-control" placeholder="Search">
                 </div>
               </li>
-              <li><a href="/">Home</a></li>
-                <li><a href="{{ url_for('shop') }}">Shop</a></li>
+              <li><a href="/customer_index">Home</a></li>
+                <li><a href="{{ url_for('customer_shop') }}">Shop</a></li>
                 <!-- <li><a href="blog.html">Blog</a></li> -->
-                <li><a href="{{ url_for('about') }}">About</a></li>
-                <li><a href="{{ url_for('contact') }}">Contact</a></li>
-                <li><a class="active" href="{{ url_for('cart') }}">Cart</a></li>
-                <li><a href="{{ url_for('signup') }}">SignUp/Login</a></li>
+                <li><a href="{{ url_for('customer_about') }}">About</a></li>
+                <li><a href="{{ url_for('customer_contact') }}">Contact</a></li>
+                <li><a class="active" href="{{ url_for('customer_cart') }}">Cart</a></li>
+                <li><a href="{{ url_for('signup') }}">Sign Out</a></li>
               <!-- <li id="lg-bag"><a href="cart.html"><i class="fa fa-shopping-bag" aria-hidden="true"></i></a></li> -->
           </ul>
       </div>
@@ -45,7 +45,7 @@
   </section>
 
     <section id="page-header" class="about-header">
-      <h2>CART</h2>
+      <h2>#YourCart</h2>
       <a href="#" class="to-top">
         <i class="fas fa-chevron-up"></i>
       </a>
@@ -239,7 +239,7 @@
           <h2>We love to hear from you</h2>
           <input type="text" placeholder="Enter your name">
           <input type="text" placeholder="Enter your Email">
-          <input type="text" placeholder="Enter your Subjext">
+          <input type="text" placeholder="Enter your Subject">
           <textarea name="" id="" cols="30" rows="10" placeholder="Your Message"></textarea>
           <button class="normal">Submit</button>
       </form>
@@ -260,77 +260,70 @@
       </div>
   </section>
 
-    <section id="newsletter" class="section-p1 section-m1">
-      <div class="newstext">
-        <h4>Sign Up for newsletter</h4>
-        <p>Lorem ipsum dolor sit amet <span>consectetur</span>.</p>
-      </div>
-      <div class="form">
-        <input type="text" placeholder="your email address" />
+  <section id="newsletter" class="section-p1 section-m1">
+    <div class="newstext">
+        <h4>Sign uP for Amazing Offers</h4>
+        <p>Find <span>pocket-friendly</span> deals in your emails.</p>
+    </div>
+    <div class="form">
+        <input type="text" placeholder="your email address">
         <button class="normal">Sign Up</button>
-      </div>
-    </section>
+    </div>
+</section>
 
-    <footer class="section-p1">
-      <div class="col">
-        <img class="logo" src="{{ url_for('static', filename='img/logo.png') }}" alt="" />
+<footer class="section-p1">
+    <div class="col">
+        <img class="logo" src="{{ url_for('static', filename='img/logo.png') }}" alt="">
         <h4>Contact</h4>
-        <p>
-          <strong><i class="fa fa-home"></i></strong> Lorem ipsum dolor sit
-        </p>
-        <p>
-          <strong><i class="fa fa-phone"></i></strong> 13569876540
-        </p>
-        <p>
-          <strong><i class="fa fa-hourglass" aria-hidden="true"></i></strong>
-          9:00 AM - 6:00 PM
-        </p>
+        <p><strong>Address :</strong> Delhi Technological University, Shahbad Daulatpur Village, Rohini, New Delhi, Delhi, 110042</p>
+        <p><strong>Phone :</strong> +91-XXXXXXXXXX</p>
+        <p><strong>Hours :</strong> 10 am - 6 pm</p>
         <div class="follow">
-          <h4>Follow Us</h4>
-          <div class="icon">
-            <i class="fab fa-facebook-f"></i>
-            <i class="fab fa-twitter"></i>
-            <i class="fab fa-instagram"></i>
-            <i class="fab fa-pinterest-p"></i>
-            <i class="fab fa-youtube"></i>
-          </div>
+            <h4>Follow Us</h4>
+            <div class="icon">
+                <i class="fab fa-facebook-f"></i>
+                <i class="fab fa-twitter"></i>
+                <i class="fab fa-instagram"></i>
+                <i class="fab fa-pinterest-p"></i>
+                <i class="fab fa-youtube"></i>
+            </div>
         </div>
-      </div>
-
-      <div class="col">
-        <h4>About</h4>
-        <a href="#">About US</a>
-        <a href="#">Delivery Information</a>
-        <a href="#">Privacy Policy</a>
-        <a href="#">Terms & Conditions</a>
-        <a href="#">Contact Us</a>
-        <a href="#">About US</a>
-      </div>
-
-      <div class="col">
-        <h4>MY Account</h4>
-        <a href="#">Sign In</a>
-        <a href="#">View Cart</a>
-        <a href="#">My Wishlist</a>
-        <a href="#">Track My Order</a>
-        <a href="#">Help</a>
-      </div>
-
-      <div class="col install">
-        <h4>Install App</h4>
-        <p>From app store or Google Play Store</p>
-        <div class="row">
-            <img src="{{ url_for('static', filename='img/pay/app.jpeg') }}" alt="">
-            <img src="{{ url_for('static', filename='img/pay/play.jpeg') }}" alt="">
-        </div>
-        <p>Secured payment Gateways</p>
-        <img src="{{ url_for('static', filename='img/pay/pay.png') }}" alt="">
     </div>
 
-    <div class="copyright">
-        <p>© 2023 Persona Picks, Inc. All Rights Reserved</p>
+<div class="col">
+    <h4>About</h4>
+    <a href="{{ url_for('customer_about') }}">About us</a>
+    <a href="{{ url_for('customer_cart') }}">Delivery Information</a>
+    <a href="{{ url_for('customer_cart') }}">Privacy Policy</a>
+    <a href="{{ url_for('customer_cart') }}">Terms & Conditions</a>
+    <a href="{{ url_for('customer_contact') }}">Contact Us</a>
+</div>
+
+<div class="col">
+    <h4>My Account</h4>
+    <a href="{{ url_for('signup') }}">Sign Out</a>
+    <a href="{{ url_for('customer_cart') }}">View Cart</a>
+    <a href="{{ url_for('customer_cart') }}">My Wishlist</a>
+    <a href="{{ url_for('customer_cart') }}">Track My Order</a>
+    <a href="{{ url_for('customer_cart') }}">Help</a>
+</div>
+
+
+<div class="col install">
+    <h4>Install App</h4>
+    <p>From app store or Google Play Store</p>
+    <div class="row">
+        <img src="{{ url_for('static', filename='img/pay/app.jpeg') }}" alt="">
+        <img src="{{ url_for('static', filename='img/pay/play.jpeg') }}" alt="">
     </div>
-    </footer>
+    <p>Secured payment Gateways</p>
+    <img src="img/pay/pay.png" alt="">
+</div>
+
+<div class="copyright">
+    <p>© 2023 Persona Picks, Inc. All Rights Reserved</p>
+</div>
+</footer>
     <style>
       .btn-cart{
       padding: 10px

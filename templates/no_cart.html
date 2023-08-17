@@ -15,7 +15,7 @@
 <body>
     
     <section id="header">
-        <a href="index.html"><img src="{{ url_for('static', filename='img/logo.png') }}" class="logo" alt=""></a>
+        <a href="#"><img src="{{ url_for('static', filename='img/logo.png') }}" class="logo" alt=""></a>
         <div>            
             <ul id="navbar">
                 <a href="#" id="close"><i class='fa fa-close'></i></a>
@@ -30,8 +30,8 @@
                 <!-- <li><a href="blog.html">Blog</a></li> -->
                 <li><a href="{{ url_for('about') }}">About</a></li>
                 <li><a href="{{ url_for('contact') }}">Contact</a></li>
-                <li><a href="{{ url_for('customer_cart') }}">Cart</a></li>
-                <li><a class="active" href="{{ url_for('signup') }}">SignUp/Login</a></li>
+                <li><a class="active" href="{{ url_for('no_cart') }}">Cart</a></li>
+                <li><a href="{{ url_for('signup') }}">SignUp/Login</a></li>
                 <!-- <li id="lg-bag"><a href="cart.html"><i class="fa fa-shopping-bag" aria-hidden="true"></i></a></li> -->
             </ul>
         </div>
@@ -41,50 +41,26 @@
         </div>
     </section>
 
-    <section id="page-header-blog" class="blog-header">
-        <h2>#Login</h2>
-        <!-- <p>READ MORE Lorem ipsum dolor sit amet consectetu</p> -->
+    <section id="page-header" class="blog-header">
+        <h2>#SignUp~Now</h2>
+        <p>If you already have an account, sign in to view your cart items</p>
         <a href="#" class="to-top">
             <i class="fas fa-chevron-up"></i>
         </a>
     </section>
     <section id="blog">
 
-        <section id="signup-body" class="section-p1">
-
-            <!-- <div id="banloop">
-                <marquee bgcolor="#ccc" loop="-5"  scrollamount="10" vspace="10" width="100%">SignUp now for extra 10% off!</marquee>
-            </div> -->
-            <div class = "both" >
-                <!-- <p>Tailored to your taste</p> -->
-                <div class="pro-container">
-                    <h2>Login</h2>
-                    <div class="pro">
-                        <div class="des">
-                            <form action="/login" method="POST">
-                                <p>
-                                    <label for="email">E-Mail</label>
-                                    <input type="email" id="email" name="email" required>
-                                </p>
-                                <p>
-                                    <label for="password">Password</label>
-                                    <input type="password" id="password" name="password" minlength="8" required>
-                                </p>
-                                <!-- <button class="normal-signup">Login</button>
-                                <p id="switch-form"><a href="{{ url_for('signup') }}">Create a new user</a></p> -->
-
-                                <div class="signup-btn">
-                                    <button class="normal-signups">Login</button>
-                                    <button class="normal-signup"><a href="{{ url_for('signup') }}">Create a new user</a></button>
-                                </div>
-                            </form>
-                        </div>
-                    </div>
-                    
-                </div>
+        <!-- <div class="blog-box">
+            <div class="blog-img"><img src="img/blog/b6.jpeg" alt=""></div>
+            <div class="blog-details">
+                <h4>Lorem, ipsum dolor.</h4>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                    Sed dignissimos exercitationem voluptatem quod earum 
+                    dicta provident nam iure libero odit!</p>
+                <a href="#">CONTINUE READING</a>
             </div>
-    
-        </section> 
+            <H1>13/01</H1>
+        </div> -->
     </section>
    
     <!-- <section id="pagination" class="section-p1">

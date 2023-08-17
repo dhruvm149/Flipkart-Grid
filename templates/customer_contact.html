@@ -24,13 +24,13 @@
                     <input type="text" class="form-control" placeholder="Search">
                   </div>
                 </li>
-                <li><a href="/">Home</a></li>
-                <li><a href="{{ url_for('shop') }}">Shop</a></li>
+                <li><a href="/customer_index">Home</a></li>
+                <li><a href="{{ url_for('customer_shop') }}">Shop</a></li>
                 <!-- <li><a href="blog.html">Blog</a></li> -->
-                <li><a href="{{ url_for('about') }}">About</a></li>
-                <li><a class="active" href="{{ url_for('contact') }}">Contact</a></li>
-                <li><a href="{{ url_for('no_cart') }}">Cart</a></li>
-                <li><a href="{{ url_for('signup') }}">SignUp/Login</a></li>
+                <li><a href="{{ url_for('customer_about') }}">About</a></li>
+                <li><a class="active" href="{{ url_for('customer_contact') }}">Contact</a></li>
+                <li><a href="{{ url_for('customer_cart') }}">Cart</a></li>
+                <li><a href="{{ url_for('signup') }}">Sign Out</a></li>
                 <!-- <li id="lg-bag"><a href="cart.html"><i class="fa fa-shopping-bag" aria-hidden="true"></i></a></li> -->
             </ul>
         </div>
@@ -84,7 +84,7 @@
             <h2>We love to hear from you</h2>
             <input type="text" placeholder="Enter your name">
             <input type="text" placeholder="Enter your Email">
-            <input type="text" placeholder="Enter your Subjext">
+            <input type="text" placeholder="Enter your Subject">
             <textarea name="" id="" cols="30" rows="10" placeholder="Your Message"></textarea>
             <button class="normal">Submit</button>
         </form>
@@ -116,42 +116,41 @@
         </div>
     </section>
 
-   <footer class="section-p1">
-    <div class="col">
-        <img class="logo" src="{{ url_for('static', filename='img/logo.png') }}" alt="">
-        <h4>Contact</h4>
-        <p><strong>Address :</strong> Delhi Technological University, Shahbad Daulatpur Village, Rohini, New Delhi, Delhi, 110042</p>
-        <p><strong>Phone :</strong> +91-XXXXXXXXXX</p>
-        <p><strong>Hours :</strong> 10 am - 6 pm</p>
-        <div class="follow">
-            <h4>Follow Us</h4>
-            <div class="icon">
-                <i class="fab fa-facebook-f"></i>
-                <i class="fab fa-twitter"></i>
-                <i class="fab fa-instagram"></i>
-                <i class="fab fa-pinterest-p"></i>
-                <i class="fab fa-youtube"></i>
+    <footer class="section-p1">
+        <div class="col">
+            <img class="logo" src="{{ url_for('static', filename='img/logo.png') }}" alt="">
+            <h4>Contact</h4>
+            <p><strong>Address :</strong> Delhi Technological University, Shahbad Daulatpur Village, Rohini, New Delhi, Delhi, 110042</p>
+            <p><strong>Phone :</strong> +91-XXXXXXXXXX</p>
+            <p><strong>Hours :</strong> 10 am - 6 pm</p>
+            <div class="follow">
+                <h4>Follow Us</h4>
+                <div class="icon">
+                    <i class="fab fa-facebook-f"></i>
+                    <i class="fab fa-twitter"></i>
+                    <i class="fab fa-instagram"></i>
+                    <i class="fab fa-pinterest-p"></i>
+                    <i class="fab fa-youtube"></i>
+                </div>
             </div>
         </div>
-    </div>
 
     <div class="col">
         <h4>About</h4>
-        <a href="{{ url_for('about') }}">About us</a>
-        <a href="{{ url_for('contact') }}">Delivery Information</a>
-        <a href="{{ url_for('contact') }}">Privacy Policy</a>
-        <a href="{{ url_for('contact') }}">Terms & Conditions</a>
-        <a href="{{ url_for('contact') }}">Contact Us</a>
-        <!-- <a href="#">About US</a> -->
+        <a href="{{ url_for('customer_about') }}">About US</a>
+        <a href="{{ url_for('customer_contact') }}">Delivery Information</a>
+        <a href="{{ url_for('customer_contact') }}">Privacy Policy</a>
+        <a href="{{ url_for('customer_contact') }}">Terms & Conditions</a>
+        <a href="{{ url_for('customer_contact') }}">Contact Us</a>
     </div>
 
     <div class="col">
         <h4>My Account</h4>
-        <a href="{{ url_for('signup') }}">Sign In</a>
-        <a href="{{ url_for('no_cart') }}">View Cart</a>
-        <a href="{{ url_for('contact') }}">My Wishlist</a>
-        <a href="{{ url_for('contact') }}">Track My Order</a>
-        <a href="{{ url_for('contact') }}">Help</a>
+        <a href="{{ url_for('signup') }}">Sign Out</a>
+        <a href="{{ url_for('customer_cart') }}">View Cart</a>
+        <a href="{{ url_for('customer_contact') }}">My Wishlist</a>
+        <a href="{{ url_for('customer_contact') }}">Track My Order</a>
+        <a href="{{ url_for('customer_contact') }}">Help</a>
     </div>
 
 
