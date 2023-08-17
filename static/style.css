@@ -128,7 +128,7 @@ body {
 
 #navbar li {
   list-style: none;
-  padding: 0 20px;
+  padding: 0 15px;
   position: relative;
 }
 #navbar li a {
@@ -616,7 +616,7 @@ footer .follow i {
 }
 
 footer .install .row img {
-  border: 1px solid #088178;
+  /* border: 1px solid #088178; */
   border-radius: 6px;
   cursor: pointer;
 }
@@ -732,6 +732,9 @@ footer .copyright {
   cursor: pointer;
 }
 
+
+
+
 /* Blog page*/
 
 #page-header-blog {
@@ -775,7 +778,7 @@ footer .copyright {
 
 #signup-body .pro {
   width: 100%;
-  height: 500px;
+  height: 550px;
   /* min-width: 250px; */
   padding: 10px 12px;
   border: 1px solid #cce7d0;
@@ -785,7 +788,7 @@ footer .copyright {
   margin: 15px 0;
   transition: 0.2s ease;
   position: relative;
-  background-color:#D6D4F2;
+  background-color: #D6D4F2;
   justify-content: center;
   display: flex;
   align-items: center;
@@ -811,6 +814,7 @@ footer .copyright {
 #signup-body .pro .des {
   text-align: center;
   padding: 10px 0;
+  display: flex;
 
 }
 
@@ -851,7 +855,37 @@ footer .copyright {
   right: 10px;
 }
 
+#signup-body .signup-btn {
+  width: 300px;
+  height: 125px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
 
+.normal-signup a {
+  display: inline-block;
+  background-color: transparent;
+  /* border: 1px solid black; */
+  padding: 1px 6px;
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+button.normal-signups {
+  font-size: 14px;
+  font-weight: 600;
+  padding: 16px 84px;
+  color: #000;
+  background-color: #384158;
+  border-radius: 4px;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  transition: 0.2s;
+}
 
 button.normal-signup {
   font-size: 14px;
