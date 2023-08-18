@@ -1,3 +1,14 @@
+import random
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+import seaborn as sns
+import sys
+
+from collections import defaultdict, Counter
+
+from surprise import Reader, Dataset, KNNBaseline
+
 from flask import Flask, jsonify, request, render_template
 from pymongo.mongo_client import MongoClient
 from pymongo.server_api import ServerApi
