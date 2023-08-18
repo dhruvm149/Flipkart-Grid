@@ -31,7 +31,7 @@ except Exception as e:
 
 @app.route('/')
 def index():
-    search("FiiO E5 Headphone Amplifier")
+    search("Boat E5 Headphone Amplifier")
     return render_template('index.html')
 
 
@@ -79,9 +79,9 @@ def customer_contact():
 def no_cart():
     return render_template('no_cart.html')
 
-@app.route('/amplifier')
-def amplifier():
-    return render_template('amplifier.html')
+@app.route('/customerindex')
+def customerindex():
+    return render_template('customerindex.html')
 
 
 @app.route('/addproduct', methods=['POST'])
