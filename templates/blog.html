@@ -18,6 +18,14 @@
         <div>
             <ul id="navbar">
                 <a href="#" id="close"><i class='fa fa-close'></i></a>
+                <li>
+                    <div class="form-group has-search" >
+                    <span class="fa fa-search form-control-feedback"></span>
+                    <input class="form-control" id="search" type="text" placeholder="Type to search...">
+                    <div id="autocompleteResults" style="display: none;"></div>
+
+                  </div>
+                </li>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="shop.html">Shop</a></li>
                 <li><a class="active" href="blog.html">Blog</a></li>
@@ -122,7 +130,7 @@
 
     <section id="newsletter" class="section-p1 section-m1">
         <div class="newstext">
-            <h4>Sign uP for newsletters</h4>
+            <h4>Sign up for newsletters</h4>
             <p>Lorem ipsum dolor sit amet <span>consectetur</span>.</p>
         </div>
         <div class="form">
@@ -178,7 +186,7 @@
             <img src="img/pay/play.jpeg" alt="">
         </div>
         <p>Secured payment Gateways</p>
-        <img src="img/pay/pay.png" alt="">
+        <img src="{{ url_for('static', filename='img/pay/pay.png') }}" alt="">
     </div>
 
     <div class="copyright">

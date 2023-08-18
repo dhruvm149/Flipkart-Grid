@@ -15,7 +15,7 @@ from surprise import Reader, Dataset, KNNBaseline
 # from surprise.model_selection import train_test_split
 # from surprise.model_selection import cross_validate
 
-def search(input):
+def recommend(input):
     # Your main program logic goes here
     # original_stdout = sys.stdout
 

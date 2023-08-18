@@ -22,9 +22,12 @@
                 <li>
                     <div class="form-group has-search" >
                     <span class="fa fa-search form-control-feedback"></span>
-                    <input type="text" class="form-control" placeholder="Search">
+                    <input class="form-control" id="search" type="text" placeholder="Type to search...">
+                    <div id="autocompleteResults" style="display: none;"></div>
+
                   </div>
                 </li>
+                
                 <li><a href="/">Home</a></li>
                 <li><a href="{{ url_for('shop') }}">Shop</a></li>
                 <!-- <li><a href="blog.html">Blog</a></li> -->
@@ -42,7 +45,7 @@
     </section>
 
     <section id="page-header-blog" class="blog-header">
-        <h2>#SignUp</h2>
+        <h2>Create a new Persona Picks account</h2>
         <!-- <p>READ MORE Lorem ipsum dolor sit amet consectetu</p> -->
         <a href="#" class="to-top">
             <i class="fas fa-chevron-up"></i>
@@ -58,38 +61,38 @@
                     <h2>Signup</h2>
                     <div class="pro">
                         <!-- <img src="img/products/f8.jpeg" alt=""> -->
-                        <div class="des">
-                            <form action="/signup" method="POST">
-                                <p>
-                                    <label for="email">E-Mail</label>
-                                    <input type="email" id="email" name="email">
+                        <div class="des" style="display: flex; text-align: end; font-weight: 700;width: 100%;">
+                            <form action="/signup" method="POST" style="width: 100%;">
+                                <p style="display: flex; align-items: center;">
+                                    <label style="font-size:14px; width: 30%; margin-right: 4px" for="email">E-Mail: </label>
+                                    <input style="width: 70%" class="form-control" type="email" id="email" name="email">
                                 </p>
-                                <p>
-                                    <label for="confirmEmail">Confirm Email</label>
-                                    <input type="email" id="confirmEmail" name="confirmEmail">
+                                <p style="display: flex; align-items: center;">
+                                    <label style="font-size:14px; width: 30%; margin-right: 4px" for="confirmEmail">Confirm Email: </label>
+                                    <input style="width: 70%" class="form-control" type="email" id="confirmEmail" name="confirmEmail">
                                 </p>
-                                <p>
-                                    <label for="password">Password</label>
-                                    <input type="password" id="password" name="password" minlength="8"
+                                <p style="display: flex; align-items: center;">
+                                    <label style="font-size:14px; width: 30%; margin-right: 4px" for="password">Password: </label>
+                                    <input style="width: 70%" class="form-control" type="password" id="password" name="password" minlength="8"
                                     >
                                 </p>
                                 <hr>
-                                <p>
-                                    <label for="fullname">Full Name</label>
-                                    <input type="text" id="fullname" name="fullname">
+                                <p style="display: flex; align-items: center;">
+                                    <label style="font-size:14px; width: 30%; margin-right: 4px" for="fullname">Full Name: </label>
+                                    <input style="width: 70%" class="form-control" type="text" id="fullname" name="fullname">
                                 </p>
-                                <p>
-                                    <label for="street">Street</label>
-                                    <input type="text" id="street" name="street">
+                                <p style="display: flex; align-items: center;">
+                                    <label style="font-size:14px; width: 30%; margin-right: 4px" for="street">Street: </label>
+                                    <input style="width: 70%" class="form-control" type="text" id="street" name="street">
                                 </p>
-                                <p>
-                                    <label for="postal">Postal Code</label>
-                                    <input type="text" id="postal" name="postal" minlength="6" maxlength="6"
+                                <p style="display: flex; align-items: center;">
+                                    <label style="font-size:14px; width: 30%; margin-right: 4px" for="postal">Postal Code: </label>
+                                    <input style="width: 70%" class="form-control" type="text" id="postal" name="postal" minlength="6" maxlength="6"
                                     >
                                 </p>
-                                <p>
-                                    <label for="city">City</label>
-                                    <input type="text" id="city" name="city">
+                                <p style="display: flex; align-items: center;">
+                                    <label style="font-size:14px; width: 30%; margin-right: 4px" for="city">City: </label>
+                                    <input style="width: 70%" class="form-control" type="text" id="city" name="city">
                                 </p>
                                 <div class="signup-btn">
                                     <button class="normal-signup">Create Account</button>
@@ -114,7 +117,7 @@
 
     <section id="newsletter" class="section-p1 section-m1">
         <div class="newstext">
-            <h4>Sign uP for newsletters</h4>
+            <h4>Sign up for newsletters</h4>
             <p>Lorem ipsum dolor sit amet <span>consectetur</span>.</p>
         </div>
         <div class="form">

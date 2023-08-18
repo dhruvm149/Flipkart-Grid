@@ -118,3 +118,63 @@ function addItemToCart(pdtname, pdtprice, img){
         cartRow.getElementsByClassName('quantity')[0].addEventListener('change',quantitychanged)
 
     }
+
+    const searchInput = document.getElementById('search');
+    const autocompleteResults = document.getElementById('autocompleteResults');
+
+    searchInput?.addEventListener('input', async () => {
+        const inputValue = searchInput.value.trim();
+
+        if (inputValue.length === 0) {
+            autocompleteResults.style.display = 'none';
+            autocompleteResults.innerHTML = '';
+            return;
+        }
+
+        const apiUrl = "http://127.0.0.1:5000/search";
+        const body = {
+            "productName": document.getElementById("search").value
+        };
+        
+        try {
+            const response = await fetch(apiUrl, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(body)
+            });
+            const data = await response.json();
+
+            if (data.length > 0) {
+                autocompleteResults.style.display = 'block';
+                autocompleteResults.innerHTML = '';
+
+                data.forEach(item => {
+                    const resultItem = document.createElement('div');
+                    resultItem.textContent = item.product_title;
+                    resultItem.classList.add('resultItem');
+                    
+                    resultItem.addEventListener('click', () => {
+                        window.location.href = "/shop";
+
+                        searchInput.value = item.product_title;
+                        autocompleteResults.style.display = 'none';
+                    });
+                    
+                    autocompleteResults.appendChild(resultItem);
+                });
+            } else {
+                autocompleteResults.style.display = 'none';
+                autocompleteResults.innerHTML = '';
+            }
+        } catch (error) {
+            console.error('API Error:', error);
+        }
+    });
+
+    document.addEventListener('click', event => {
+        if (!autocompleteResults.contains(event.target) && event.target !== searchInput) {
+            autocompleteResults.style.display = 'none';
+        }
+    });

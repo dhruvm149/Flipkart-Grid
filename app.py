@@ -10,9 +10,13 @@ from flask import Flask, jsonify, request, render_template
 from pymongo.mongo_client import MongoClient
 from pymongo.server_api import ServerApi
 from flask_cors import CORS
+from bson import json_util
+import json
 import re
 import bcrypt
-from search_and_recommend_files.recommend import search
+from search_and_recommend_files.recommend import recommend
+from search_and_recommend_files.searchfirst import search1
+import csv
 
 app = Flask(__name__)
 CORS(app)  # This will enable CORS for your entire app
@@ -31,7 +35,6 @@ except Exception as e:
 
 @app.route('/')
 def index():
-    search("FiiO E5 Headphone Amplifier")
     return render_template('index.html')
 
 
@@ -133,7 +136,8 @@ def login():
 
         # Hash the password before storing it
         # hashed_password = bcrypt.hashpw(password.encode('utf-8'), bcrypt.gensalt())
-        user = jsonify(db.users.find({"email": email}))
+        user = db.users.find({"email": email})
+        print(list(user))
 
         # Check if the username is already taken
         if not user:
@@ -145,13 +149,20 @@ def login():
 
 @app.route('/search', methods=['POST'])
 def search_data():
-    # Assuming you're sending JSON data
     search_str = request.json["productName"]
-    # Create a regex pattern for searching similar product names
-    regex_pattern = re.compile(f".*{search_str}.*", re.IGNORECASE)
+    recommendation = search1(search_str)
 
-    data = db.recommendationDB.find({"productName": regex_pattern})
-    return jsonify(data)
+    with open('search_and_recommend_files/df_mean.csv', 'r') as csv_file:
+        csv_reader = csv.DictReader(csv_file)
+        products = []
+
+        for product in recommendation:
+            for row in csv_reader:
+                if row['product_title'] == product:
+                    products.append(row)
+            csv_file.seek(0)
+  
+    return products
 
 if __name__ == '__main__':
     app.run(debug=True)

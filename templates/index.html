@@ -22,7 +22,9 @@
                 <li>
                     <div class="form-group has-search" >
                     <span class="fa fa-search form-control-feedback"></span>
-                    <input type="text" class="form-control" placeholder="Search">
+                    <input class="form-control" id="search" type="text" placeholder="Type to search...">
+                    <div id="autocompleteResults" style="display: none;"></div>
+
                   </div>
                 </li>
                 <li><a class="active" href="/">Home</a></li>
@@ -537,7 +539,7 @@
 
     <section id="newsletter" class="section-p1 section-m1">
         <div class="newstext">
-            <h4>Sign uP for Amazing Offers</h4>
+            <h4>Sign up for Amazing Offers</h4>
             <p>Find <span>pocket-friendly</span> deals in your emails.</p>
         </div>
         <div class="form">
@@ -593,7 +595,7 @@
             <img src="{{ url_for('static', filename='img/pay/play.jpeg') }}" alt="">
         </div>
         <p>Secured payment Gateways</p>
-        <img src="img/pay/pay.png" alt="">
+        <img src="{{ url_for('static', filename='img/pay/pay.png') }}" alt="">
     </div>
 
     <div class="copyright">
@@ -606,9 +608,12 @@
     </div>
 
     <script>
+         // saving user data on login
         const dataContainer = document.getElementById('data-container');
         const user = dataContainer.dataset.user;
-        localStorage.setItem('user', user)
+        if(user){
+            localStorage.setItem('user', user)
+        }
     </script>
     <script src="{{ url_for('static', filename='script.js') }}"></script>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
@@ -616,10 +621,3 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 </body>
 </html>
-
-
-
-
-
-
-<!-- Jokhon responsive mobile version e asbo tokhon, div er section er size ta change ki kore korbo -->
