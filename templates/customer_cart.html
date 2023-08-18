@@ -22,20 +22,14 @@
       <div>            
           <ul id="navbar">
               <a href="#" id="close"><i class='fa fa-close'></i></a>
-                <li>
-                    <div class="form-group has-search" >
-                    <span class="fa fa-search form-control-feedback"></span>
-                    <input class="form-control" id="search" type="text" placeholder="Type to search...">
-                    <div id="autocompleteResults" style="display: none;"></div>
-
-                  </div>
-                </li>
               <li>
-                  <div class="form-group has-search" >
-                  <span class="fa fa-search form-control-feedback"></span>
-                  <input type="text" class="form-control" placeholder="Search">
-                </div>
-              </li>
+                <div class="form-group has-search" >
+                <span class="fa fa-search form-control-feedback"></span>
+                <input class="form-control" id="search" type="text" placeholder="Type to search...">
+                <div id="autocompleteResults" style="display: none;"></div>
+
+              </div>
+            </li>
               <li><a href="{{ url_for('customer_index') }}">Home</a></li>
                 <li><a href="{{ url_for('customer_shop') }}">Shop</a></li>
                 <!-- <li><a href="blog.html">Blog</a></li> -->

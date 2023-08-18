@@ -86,6 +86,10 @@ def no_cart():
 def customerindex():
     return render_template('customerindex.html')
 
+@app.route('/customeriindex')
+def customeriindex():
+    return render_template('customeriindex.html')
+
 
 @app.route('/addproduct', methods=['POST'])
 def add_data():
