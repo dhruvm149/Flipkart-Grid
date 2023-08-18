@@ -2,9 +2,9 @@ from flask import Flask, jsonify, request, render_template
 from pymongo.mongo_client import MongoClient
 from pymongo.server_api import ServerApi
 from flask_cors import CORS
-from bson import json_util
 import re
 import bcrypt
+from search_and_recommend_files.recommend import search
 
 app = Flask(__name__)
 CORS(app)  # This will enable CORS for your entire app
@@ -23,6 +23,7 @@ except Exception as e:
 
 @app.route('/')
 def index():
+    search("FiiO E5 Headphone Amplifier")
     return render_template('index.html')
 
 
@@ -81,7 +82,7 @@ def add_data():
 @app.route('/getproducts', methods=['GET'])
 def get_data():
     data = list(db.recommendationDB.find())
-    return json_util.dumps(data)
+    return jsonify(data)
 
 
 @app.route('/signup', methods=['GET', 'POST'])
@@ -124,7 +125,7 @@ def login():
 
         # Hash the password before storing it
         # hashed_password = bcrypt.hashpw(password.encode('utf-8'), bcrypt.gensalt())
-        user = json_util.dumps(db.users.find({"email": email}))
+        user = jsonify(db.users.find({"email": email}))
 
         # Check if the username is already taken
         if not user:
@@ -142,7 +143,7 @@ def search_data():
     regex_pattern = re.compile(f".*{search_str}.*", re.IGNORECASE)
 
     data = db.recommendationDB.find({"productName": regex_pattern})
-    return json_util.dumps(data)
+    return jsonify(data)
 
 
 if __name__ == '__main__':
