@@ -5,10 +5,6 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 import sys
 
-from collections import defaultdict, Counter
-
-from surprise import Reader, Dataset, KNNBaseline
-
 from flask import Flask, jsonify, request, render_template
 from pymongo.mongo_client import MongoClient
 from pymongo.server_api import ServerApi
@@ -155,7 +151,6 @@ def search_data():
 
     data = db.recommendationDB.find({"productName": regex_pattern})
     return jsonify(data)
-
 
 if __name__ == '__main__':
     app.run(debug=True)
