@@ -4,6 +4,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 import seaborn as sns
 import sys
+import warnings
 
 from flask import Flask, jsonify, request, render_template
 from pymongo.mongo_client import MongoClient
