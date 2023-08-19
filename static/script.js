@@ -156,9 +156,15 @@ function addItemToCart(pdtname, pdtprice, img){
                     resultItem.classList.add('resultItem');
                     
                     resultItem.addEventListener('click', () => {
-                        window.location.href = "/shop";
+                        console.log(item.product_title.includes('Watch'));
 
-                        searchInput.value = item.product_title;
+                        if(item.product_title.includes('Watch')){
+                            window.location.href = "/customeriindex";
+                        }else if(item.product_title.includes('Amplifier')){
+                            window.location.href = "/customerindex";
+                        }
+
+                        // searchInput.value = item.product_title;
                         autocompleteResults.style.display = 'none';
                     });
                     

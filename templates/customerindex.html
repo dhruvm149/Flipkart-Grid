@@ -27,8 +27,8 @@
 
                   </div>
                 </li>
-                <li><a class="active" href="/customer_index">Home</a></li>
-                <li><a href="{{ url_for('customer_shop') }}">Shop</a></li>
+                <li><a href="/customer_index">Home</a></li>
+                <li><a class="active" href="{{ url_for('customer_shop') }}">Shop</a></li>
                 <!-- <li><a href="blog.html">Blog</a></li> -->
                 <li><a href="{{ url_for('customer_about') }}">About</a></li>
                 <li><a href="{{ url_for('customer_contact') }}">Contact</a></li>
@@ -56,7 +56,7 @@
 
                 <div class="des">
                     <span>Boat</span>
-                    <h5>Boat E6 Portable Audio Headphone Amplifier</h5>
+                    <h5>Boat E17 Alpen Portable Headphone Amplifier USB DAC</h5>
                     <div class="star">
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
@@ -605,11 +605,6 @@
         data-user="{{ user }}">
     </div>
 
-    <script>
-        const dataContainer = document.getElementById('data-container');
-        const user = dataContainer.dataset.user;
-        localStorage.setItem('user', user)
-    </script>
     <script src="{{ url_for('static', filename='script.js') }}"></script>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
